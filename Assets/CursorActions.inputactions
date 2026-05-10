@@ -1,0 +1,55 @@
+{
+    "version": 1,
+    "name": "CursorActions",
+    "maps": [
+        {
+            "name": "Mouse",
+            "id": "57d53161-3988-46f6-a38a-3bc6ce28cbf0",
+            "actions": [
+                {
+                    "name": "Click",
+                    "type": "Button",
+                    "id": "f82df9e7-fa67-46a7-87df-2e32f72e8ef5",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "Press(behavior=1)",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Position",
+                    "type": "Value",
+                    "id": "bcbe9aa3-4397-4da0-80c8-c528fa3e4b4f",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "2aa682f2-8223-47f4-962e-5cf63fd9920f",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Click",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "b88de992-73db-4619-aa11-735efe914b4e",
+                    "path": "<Mouse>/position",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Position",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
