@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 3
   tags:
   - Door
+  - Monster
+  - Item
+  - Trap
   layers:
   - Default
   - TransparentFX

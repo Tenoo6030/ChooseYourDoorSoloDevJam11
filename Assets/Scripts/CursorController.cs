@@ -55,6 +55,10 @@ public class CursorController : MonoBehaviour
         DetectObject();
 
     }
+    private void ChangeCursor(Texture2D cursorType)
+    {
+        Cursor.SetCursor(cursorType, Vector2.zero, CursorMode.Auto);
+    }
 
     private Transform DetectObject()
     {
@@ -62,20 +66,37 @@ public class CursorController : MonoBehaviour
 
         if (Physics.Raycast(ray, out RaycastHit hit))
         {
-            if (hit.collider != null && hit.collider.CompareTag("Door"))
-            {
-                Door obj = hit.collider.GetComponent<Door>();
-                obj.SetNewRoom();
+            if (hit.collider != null)
 
-            }
+                switch (hit.collider.tag)
+                {
+                    case "Door":
+                        Door objD = hit.collider.GetComponent<Door>();
+                        objD.OnClickAction();
+                        break;
+
+                    case "Monster":
+                        Monster objM = hit.collider.GetComponent<Monster>();
+                        objM.OnClickAction();
+                        break;
+
+                    case "Item":
+                        Item objI = hit.collider.GetComponent<Item>();
+                        objI.OnClickAction();
+                        break;
+
+                    case "Trap":
+                        Trap objT = hit.collider.GetComponent<Trap>();
+                        objT.OnClickAction();
+                        break;
+
+                    default:
+                        break;
+                }
         }
         return null;
     }
 
-    private void ChangeCursor(Texture2D cursorType)
-    {
-        Cursor.SetCursor(cursorType, Vector2.zero, CursorMode.Auto);
-    }
 
 
 

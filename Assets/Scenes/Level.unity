@@ -475,6 +475,12 @@ MonoBehaviour:
   - {fileID: 784457324252384760, guid: cb6798243ea27a54e9cc4a8ce88e1467, type: 3}
   - {fileID: -200096266758522348, guid: 599c11b843c1c6244924b8bf59df0ad0, type: 3}
   - {fileID: 1493213123729803145, guid: 45290682a1e58bc46a4728c8c247d41b, type: 3}
+  monstersPref:
+  - {fileID: 2698932895833816874, guid: 44dc3d7b7625c96439b5f9e13347d7c1, type: 3}
+  itemPref:
+  - {fileID: 3952233969035015574, guid: 1cb1d22db109fc244b6f8d43accf4e37, type: 3}
+  trapPref:
+  - {fileID: 994442720724432908, guid: 1c8287f0ccc6dc4499deb3c2885a8fa1, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

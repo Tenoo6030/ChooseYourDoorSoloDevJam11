@@ -2315,6 +2315,9 @@ MonoBehaviour:
   - {fileID: 8718939285037262643}
   - {fileID: 6036892574199144599}
   - {fileID: 3355233903393896763}
+  cameraSpawnPoint: {fileID: 3452284851051056987}
+  spawnPoint: {fileID: 9211882466684351137}
+  newInteraction: {fileID: 0}
 --- !u!1 &8672593709873833146
 GameObject:
   m_ObjectHideFlags: 0
