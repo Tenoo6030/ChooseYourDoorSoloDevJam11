@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   roomName: OneDoorLeft
   roomPref: {fileID: 444587768339750762, guid: 0d072227a2b917643b1da4696aed8dfc, type: 3}
+  doorsDirection: 02000000
   doorNamber: 1
   doorSOPrefs:
   - {fileID: 11400000, guid: ec5dbc1a6204b7c4fba6256e200dc747, type: 2}

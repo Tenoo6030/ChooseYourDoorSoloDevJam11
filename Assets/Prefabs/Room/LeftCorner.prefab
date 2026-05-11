@@ -8,6 +8,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -200096266758522348, guid: 599c11b843c1c6244924b8bf59df0ad0, type: 3}
+      propertyPath: room
+      value: 
+      objectReference: {fileID: 11400000, guid: 076cba0126afb9248bf21e75caad3faa, type: 2}
+    - target: {fileID: -200096266758522348, guid: 599c11b843c1c6244924b8bf59df0ad0, type: 3}
+      propertyPath: doorSpawnPoint.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -200096266758522348, guid: 599c11b843c1c6244924b8bf59df0ad0, type: 3}
+      propertyPath: 'doorSpawnPoint.Array.data[1]'
+      value: 
+      objectReference: {fileID: 4492899330917672230}
+    - target: {fileID: -200096266758522348, guid: 599c11b843c1c6244924b8bf59df0ad0, type: 3}
+      propertyPath: 'doorSpawnPoint.Array.data[2]'
+      value: 
+      objectReference: {fileID: 4831951844119329930}
     - target: {fileID: 1129846201443131562, guid: 599c11b843c1c6244924b8bf59df0ad0, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -65,3 +81,13 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 599c11b843c1c6244924b8bf59df0ad0, type: 3}
+--- !u!4 &4492899330917672230 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3355233903393896763, guid: 599c11b843c1c6244924b8bf59df0ad0, type: 3}
+  m_PrefabInstance: {fileID: 1209730342333963293}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &4831951844119329930 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6036892574199144599, guid: 599c11b843c1c6244924b8bf59df0ad0, type: 3}
+  m_PrefabInstance: {fileID: 1209730342333963293}
+  m_PrefabAsset: {fileID: 0}

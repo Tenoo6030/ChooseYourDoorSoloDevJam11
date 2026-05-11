@@ -62,14 +62,10 @@ public class CursorController : MonoBehaviour
 
         if (Physics.Raycast(ray, out RaycastHit hit))
         {
-            if (hit.collider != null && hit.collider.name == "Door")
+            if (hit.collider != null && hit.collider.CompareTag("Door"))
             {
-                Transform obj = hit.collider.GetComponent<Transform>();
-                Transform[] objChildren = obj.GetComponentsInChildren<Transform>();
-                foreach (Transform child in objChildren)
-                {
-                    Debug.Log(child.name);
-                }
+                Door obj = hit.collider.GetComponent<Door>();
+                obj.SetNewRoom();
 
             }
         }

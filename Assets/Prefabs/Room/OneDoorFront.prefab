@@ -8,6 +8,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -200096266758522348, guid: 599c11b843c1c6244924b8bf59df0ad0, type: 3}
+      propertyPath: room
+      value: 
+      objectReference: {fileID: 11400000, guid: 8abcd6d7f340384489a61cbef99be874, type: 2}
+    - target: {fileID: -200096266758522348, guid: 599c11b843c1c6244924b8bf59df0ad0, type: 3}
+      propertyPath: doorSpawnPoint.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 405164739753182869, guid: 599c11b843c1c6244924b8bf59df0ad0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1129846201443131562, guid: 599c11b843c1c6244924b8bf59df0ad0, type: 3}
       propertyPath: m_IsActive
       value: 1

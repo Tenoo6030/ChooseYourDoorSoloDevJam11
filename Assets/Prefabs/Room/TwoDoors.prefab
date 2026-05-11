@@ -8,6 +8,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -200096266758522348, guid: 599c11b843c1c6244924b8bf59df0ad0, type: 3}
+      propertyPath: room
+      value: 
+      objectReference: {fileID: 11400000, guid: 720323c526a0f2b47af4fbfa8cb65e6d, type: 2}
+    - target: {fileID: -200096266758522348, guid: 599c11b843c1c6244924b8bf59df0ad0, type: 3}
+      propertyPath: doorSpawnPoint.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -200096266758522348, guid: 599c11b843c1c6244924b8bf59df0ad0, type: 3}
+      propertyPath: 'doorSpawnPoint.Array.data[0]'
+      value: 
+      objectReference: {fileID: 4199238463892053258}
+    - target: {fileID: -200096266758522348, guid: 599c11b843c1c6244924b8bf59df0ad0, type: 3}
+      propertyPath: 'doorSpawnPoint.Array.data[1]'
+      value: 
+      objectReference: {fileID: 5121093709244908710}
+    - target: {fileID: -200096266758522348, guid: 599c11b843c1c6244924b8bf59df0ad0, type: 3}
+      propertyPath: 'doorSpawnPoint.Array.data[2]'
+      value: 
+      objectReference: {fileID: 1260460306291497646}
     - target: {fileID: 1464639113544004716, guid: 599c11b843c1c6244924b8bf59df0ad0, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -56,6 +76,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7230530928747513681, guid: 599c11b843c1c6244924b8bf59df0ad0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8671341113326639862, guid: 599c11b843c1c6244924b8bf59df0ad0, type: 3}
       propertyPath: m_Name
       value: TwoDoors
@@ -65,3 +89,18 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 599c11b843c1c6244924b8bf59df0ad0, type: 3}
+--- !u!4 &1260460306291497646 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8718939285037262643, guid: 599c11b843c1c6244924b8bf59df0ad0, type: 3}
+  m_PrefabInstance: {fileID: 7602613754326695325}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &4199238463892053258 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6036892574199144599, guid: 599c11b843c1c6244924b8bf59df0ad0, type: 3}
+  m_PrefabInstance: {fileID: 7602613754326695325}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &5121093709244908710 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3355233903393896763, guid: 599c11b843c1c6244924b8bf59df0ad0, type: 3}
+  m_PrefabInstance: {fileID: 7602613754326695325}
+  m_PrefabAsset: {fileID: 0}

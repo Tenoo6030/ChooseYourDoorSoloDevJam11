@@ -8,6 +8,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -200096266758522348, guid: 599c11b843c1c6244924b8bf59df0ad0, type: 3}
+      propertyPath: room
+      value: 
+      objectReference: {fileID: 11400000, guid: 230b27fff95a78843907f770e7a0e2fe, type: 2}
+    - target: {fileID: -200096266758522348, guid: 599c11b843c1c6244924b8bf59df0ad0, type: 3}
+      propertyPath: doorSpawnPoint.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -200096266758522348, guid: 599c11b843c1c6244924b8bf59df0ad0, type: 3}
+      propertyPath: 'doorSpawnPoint.Array.data[0]'
+      value: 
+      objectReference: {fileID: 4078162793831630696}
+    - target: {fileID: -200096266758522348, guid: 599c11b843c1c6244924b8bf59df0ad0, type: 3}
+      propertyPath: 'doorSpawnPoint.Array.data[1]'
+      value: 
+      objectReference: {fileID: 5030518373641494212}
+    - target: {fileID: 405164739753182869, guid: 599c11b843c1c6244924b8bf59df0ad0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1464639113544004716, guid: 599c11b843c1c6244924b8bf59df0ad0, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -64,6 +84,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7230530928747513681, guid: 599c11b843c1c6244924b8bf59df0ad0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8671341113326639862, guid: 599c11b843c1c6244924b8bf59df0ad0, type: 3}
       propertyPath: m_Name
       value: OneDoorRight
@@ -73,3 +97,13 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 599c11b843c1c6244924b8bf59df0ad0, type: 3}
+--- !u!4 &4078162793831630696 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6036892574199144599, guid: 599c11b843c1c6244924b8bf59df0ad0, type: 3}
+  m_PrefabInstance: {fileID: 7737134387843164159}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &5030518373641494212 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3355233903393896763, guid: 599c11b843c1c6244924b8bf59df0ad0, type: 3}
+  m_PrefabInstance: {fileID: 7737134387843164159}
+  m_PrefabAsset: {fileID: 0}
