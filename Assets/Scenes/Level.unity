@@ -93,7 +93,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 20201, guid: 0000000000000000f000000000000000, type: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: cdf4b3961dab92549b27ab1f296b4b86, type: 2}
   m_LightingSettings: {fileID: 0}
 --- !u!196 &4
 NavMeshSettings:
@@ -346,7 +346,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 80
+  field of view: 60
   orthographic: 0
   orthographic size: 5.6
   m_Depth: -1
@@ -478,9 +478,9 @@ MonoBehaviour:
   monstersPref:
   - {fileID: 2698932895833816874, guid: 44dc3d7b7625c96439b5f9e13347d7c1, type: 3}
   itemPref:
-  - {fileID: 3952233969035015574, guid: 1cb1d22db109fc244b6f8d43accf4e37, type: 3}
+  - {fileID: 6319981788080396236, guid: 1cb1d22db109fc244b6f8d43accf4e37, type: 3}
   trapPref:
-  - {fileID: 994442720724432908, guid: 1c8287f0ccc6dc4499deb3c2885a8fa1, type: 3}
+  - {fileID: 3696494380681284257, guid: 47a4584ca2946de44890b23fb6d3c2a1, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

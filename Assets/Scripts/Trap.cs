@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Trap : MonoBehaviour
+public class Trap : MonoBehaviour, IClicked
 {
     [SerializeField] private Transform trap;
     public void OnClickAction()
