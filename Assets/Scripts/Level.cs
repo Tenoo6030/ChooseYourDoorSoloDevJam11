@@ -3,15 +3,18 @@ using UnityEngine;
 
 public class Level : MonoBehaviour
 {
-    [SerializeField] protected List<Room> roomVariants = new();
-    [SerializeField] protected List<Transform> monstersPref = new();
-    [SerializeField] protected List<Transform> itemPref = new();
-    [SerializeField] protected List<Transform> trapPref = new();
-
+    [SerializeField] private List<Room> roomVariants = new();
+    [SerializeField] private List<Transform> monstersPref = new();
+    [SerializeField] private List<Transform> itemPref = new();
+    [SerializeField] private List<Transform> trapPref = new();
+    [SerializeField]private PlayerSO playerData;
+    
     private Transform currentRoom;
     private Transform currentInteractiweObject;
 
     public static Level Instance { get; private set; }
+    public PlayerSO PlayerData { get => playerData; set => playerData = value; }
+
 
     private void Awake()
     {
@@ -29,7 +32,7 @@ public class Level : MonoBehaviour
     {
         if (currentRoom != null)
         {
-            DestroyIt(currentRoom.gameObject);
+            Destroy(currentRoom.gameObject);
         }
         currentRoom = roomVariants[Random.Range(0, roomVariants.Count)].CreateRoom(type);
 
@@ -57,7 +60,7 @@ public class Level : MonoBehaviour
         //        currentW -= room.doorSOPrefs[i].weaght;
         //    }
         //}
-       
+        currentInteractiweObject = monstersPref[0];
         return monstersPref[0];
     }
     public Transform CreateNewItem()
@@ -82,7 +85,7 @@ public class Level : MonoBehaviour
         //        currentW -= room.doorSOPrefs[i].weaght;
         //    }
         //}
-       
+       currentInteractiweObject = itemPref[0];
         return itemPref[0];
     }
     public Transform CreateNewTrap()
@@ -107,13 +110,17 @@ public class Level : MonoBehaviour
         //        currentW -= room.doorSOPrefs[i].weaght;
         //    }
         //}
-        
+        currentInteractiweObject = trapPref[0];
         return trapPref[0];
     }
 
-    public void DestroyIt(GameObject _object)
+    public Transform CreateNewInteraction()
     {
-        Destroy(_object);
-        
+        return null;
+    }
+
+    private void OnDestroy()
+    {
+        playerData.ResetHealth();
     }
 }

@@ -1,0 +1,27 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI%20Toolkit/HudStyles.uss?fileID=7433441132597879392&amp;guid=da8e4f8d4ea10d24699d187b9f4efb5e&amp;type=3#HudStyles" />
+    <ui:VisualElement enabled="true" focusable="false" name="HealtBarContener" data-source="project://database/Assets/ScriptableObjects/Player.asset?fileID=11400000&amp;guid=69077ffab16b78149b35574d0b980feb&amp;type=2#Player" class="HealtBar" style="left: 560px; right: 560px;">
+        <ui:VisualElement focusable="false" name="FillHealtBar" style="flex-grow: 1; background-color: rgb(255, 0, 0); width: 800px; height: 50px; position: absolute;">
+            <Bindings>
+                <ui:DataBinding property="style.width" data-source-path="healtBarFill" binding-mode="ToTarget" />
+            </Bindings>
+        </ui:VisualElement>
+        <ui:Label text="Label" name="HealtPoints" class="HealtPoints">
+            <Bindings>
+                <ui:DataBinding property="text" data-source-path="healt" binding-mode="ToTarget" />
+            </Bindings>
+        </ui:Label>
+    </ui:VisualElement>
+    <ui:VisualElement name="DoorCostContener" enabled="true" style="top: 50px; left: 710px; right: 710px; width: 500px; height: 50px; flex-direction: row; display: flex; visibility: visible; position: absolute;">
+        <ui:Label text="Cost to Open:" name="CostText" style="width: 331px; font-size: 50px; color: rgb(255, 254, 254); -unity-text-align: middle-center; white-space: nowrap;" />
+        <ui:Label text="0" name="Cost" style="font-size: 50px; color: rgb(255, 254, 254); -unity-text-align: middle-left; white-space: nowrap; position: relative; flex-shrink: 1; flex-grow: 1;" />
+    </ui:VisualElement>
+    <ui:VisualElement name="HendContener" style="flex-grow: 1; bottom: 0; left: 860px; right: 860px; top: auto; position: absolute; height: 100px; width: 200px; flex-direction: row;">
+        <ui:VisualElement name="LeftHend" style="flex-grow: 1; background-color: rgb(123, 123, 123); border-left-color: rgb(0, 255, 7); border-right-color: rgb(0, 255, 7); border-top-color: rgb(0, 255, 7); border-bottom-color: rgb(0, 255, 7); border-top-width: 10px; border-right-width: 10px; border-bottom-width: 10px; border-left-width: 10px;">
+            <ui:VisualElement name="ItemInLeftHend" style="flex-grow: 1; background-color: rgb(123, 123, 123); background-image: url(&quot;project://database/Assets/Art/pointer.png?fileID=2800000&amp;guid=839600001f024794d975aa684dcd091b&amp;type=3#pointer&quot;);" />
+        </ui:VisualElement>
+        <ui:VisualElement name="RightHend" style="flex-grow: 1; background-color: rgb(123, 123, 123); border-top-width: 10px; border-left-color: rgb(0, 35, 255); border-right-color: rgb(0, 35, 255); border-top-color: rgb(0, 35, 255); border-bottom-color: rgb(0, 35, 255); border-right-width: 10px; border-bottom-width: 10px; border-left-width: 10px;">
+            <ui:VisualElement name="ItemInRightHend" style="flex-grow: 1; background-color: rgb(123, 123, 123); background-image: url(&quot;project://database/Assets/Art/cursor.png?fileID=2800000&amp;guid=e1eca0fd586d911449602b90fc119531&amp;type=3#cursor&quot;);" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

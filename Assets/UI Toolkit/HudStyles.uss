@@ -1,0 +1,30 @@
+.HealtBar {
+    flex-grow: 1;
+    right: 0;
+    left: 550px;
+    top: 0;
+    position: absolute;
+    width: 800px;
+    height: 50px;
+    background-color: rgb(135, 135, 135);
+}
+
+.HealtPoints {
+    position: relative;
+    visibility: visible;
+    height: 43px;
+    -unity-text-align: middle-center;
+    font-size: 0;
+    color: rgb(255, 255, 255);
+    -unity-font-style: bold;
+}
+
+.HealtPoints:hover {
+    position: relative;
+    visibility: visible;
+    height: 43px;
+    -unity-text-align: middle-center;
+    font-size: 50px;
+    color: rgb(255, 255, 255);
+    -unity-font-style: bold;
+}

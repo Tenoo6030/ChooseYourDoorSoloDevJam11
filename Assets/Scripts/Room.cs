@@ -39,26 +39,43 @@ public class Room : MonoBehaviour
     private Transform SelectDoor()
     {
         int weaght = 0;
-        for (int i = 0; i < room.doorSOPrefs.Length; i++)
+        foreach (var doorWeaght in room.doorSOPrefs)
         {
-            weaght += room.doorSOPrefs[i].weaght;
+            weaght += doorWeaght.weaght;
         }
-
         int currentW = Random.Range(0, weaght);
-        for (int i = 0; i < room.doorSOPrefs.Length; i++)
+        foreach (var door in room.doorSOPrefs)
         {
-
-            if (currentW - room.doorSOPrefs[i].weaght <= 0)
+            if (currentW - door.weaght <= 0)
             {
-
-                return room.doorSOPrefs[i].doorPref;
+                door.doorPref.GetComponent<Door>().SetCost();
+                return door.doorPref;
             }
             else
             {
-                currentW -= room.doorSOPrefs[i].weaght;
+                currentW -= door.weaght;
             }
-        }
 
+        //for (int i = 0; i < room.doorSOPrefs.Length; i++)
+        //{
+        //    weaght += room.doorSOPrefs[i].weaght;
+        //}
+
+            //for (int i = 0; i < room.doorSOPrefs.Length; i++)
+            //{
+
+            //    if (currentW - room.doorSOPrefs[i].weaght <= 0)
+            //    {
+
+            //        return room.doorSOPrefs[i].doorPref;
+            //    }
+            //    else
+            //    {
+            //        currentW -= room.doorSOPrefs[i].weaght;
+            //    }
+            //}
+
+        }
         return null;
     }
 

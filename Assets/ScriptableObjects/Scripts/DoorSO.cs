@@ -4,10 +4,8 @@ using UnityEngine;
 public class DoorSO : ScriptableObject
 {
     public int weaght;
-
     public string doorName;
     public Transform doorPref;
-
     public TypesOfRoom room;
 
 }
