@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b4c6587ac331944ea58ada8319de762, type: 3}
   m_Name: Player
   m_EditorClassIdentifier: 
-  healt: 0
-  healtBarFill: 0
-  doorCost: 
+  healt: 100
+  healtBarFill: 800
+  doorCost: 0

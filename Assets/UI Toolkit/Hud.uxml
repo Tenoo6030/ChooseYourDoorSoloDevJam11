@@ -6,13 +6,13 @@
                 <ui:DataBinding property="style.width" data-source-path="healtBarFill" binding-mode="ToTarget" />
             </Bindings>
         </ui:VisualElement>
-        <ui:Label text="Label" name="HealtPoints" class="HealtPoints">
+        <ui:Label text="Label" name="HealtPoints" class="HealtText">
             <Bindings>
                 <ui:DataBinding property="text" data-source-path="healt" binding-mode="ToTarget" />
             </Bindings>
         </ui:Label>
     </ui:VisualElement>
-    <ui:VisualElement name="DoorCostContener" enabled="true" style="top: 50px; left: 710px; right: 710px; width: 500px; height: 50px; flex-direction: row; display: flex; visibility: visible; position: absolute;">
+    <ui:VisualElement name="DoorCostContener" enabled="true" style="top: 50px; left: 770px; right: 710px; width: 500px; height: 50px; flex-direction: row; display: flex; visibility: visible; position: absolute;">
         <ui:Label text="Cost to Open:" name="CostText" style="width: 331px; font-size: 50px; color: rgb(255, 254, 254); -unity-text-align: middle-center; white-space: nowrap;" />
         <ui:Label text="0" name="Cost" style="font-size: 50px; color: rgb(255, 254, 254); -unity-text-align: middle-left; white-space: nowrap; position: relative; flex-shrink: 1; flex-grow: 1;" />
     </ui:VisualElement>

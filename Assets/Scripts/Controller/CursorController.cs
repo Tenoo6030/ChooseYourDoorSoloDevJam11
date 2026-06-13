@@ -10,6 +10,8 @@ public class CursorController : MonoBehaviour
 
     private CursorActions controls;
     private Camera mainCamrra;
+    private Ray ray;
+    RaycastHit hit;
 
 
 
@@ -43,22 +45,23 @@ public class CursorController : MonoBehaviour
     private void Update()
     {
 
-        Ray ray = mainCamrra.ScreenPointToRay(controls.Mouse.Position.ReadValue<Vector2>());
-        if (Physics.Raycast(ray, out RaycastHit hit))
+        ray = mainCamrra.ScreenPointToRay(controls.Mouse.Position.ReadValue<Vector2>());
+        VisualElement doorContener;
+        doorContener = uiDocument.rootVisualElement.Q<VisualElement>("DoorCostContener");
+        if (Physics.Raycast(ray, out hit))
         {
             if (hit.collider != null && hit.collider.gameObject.CompareTag("Door"))
             {
 
                 Door doorData = hit.collider.GetComponent<Door>();
-                VisualElement doorContener = uiDocument.rootVisualElement.Q<VisualElement>("DoorCostContener");
                 doorContener.visible = true;
                 Label doorCost = uiDocument.rootVisualElement.Q<Label>("Cost");
                 doorCost.text = doorData.EntryCost.ToString();
             }
+
         }
         else
         {
-            VisualElement doorContener = uiDocument.rootVisualElement.Q<VisualElement>("DoorCostContener");
             doorContener.visible = false;
         }
     }
@@ -71,7 +74,11 @@ public class CursorController : MonoBehaviour
     private void EndedClick()
     {
         ChangeCursor(cursor);
-        DetectObject();
+        if (hit.collider != null)
+        {
+            DetectObject();
+
+        }
 
     }
 
@@ -80,21 +87,26 @@ public class CursorController : MonoBehaviour
         Cursor.SetCursor(cursorType, Vector2.zero, CursorMode.Auto);
     }
 
-    private Transform DetectObject()
+    private void DetectObject()
     {
-        Ray ray = mainCamrra.ScreenPointToRay(controls.Mouse.Position.ReadValue<Vector2>());
 
-        if (Physics.Raycast(ray, out RaycastHit hit))
+        switch (Level.Instance.CurrentRoomTyp)
         {
-            if (hit.collider != null)
-            {
-                IClicked obj = hit.collider.GetComponent<IClicked>();
-                obj.OnClickAction();
+            case ERoomTyp.Empty:
+                hit.collider.TryGetComponent<Door>(out var objD);
+                objD.OnClickAction();
+                break;
 
-            }
+            case ERoomTyp.Item:
+            case ERoomTyp.Monster:
+            case ERoomTyp.Trap:
+                hit.collider.TryGetComponent<Interaction>(out var objI);
+                objI?.OnClickAction();
+                break;
 
+            default:
+                break;
         }
-        return null;
-    }
 
+    }
 }

@@ -1,12 +1,12 @@
 using UnityEngine;
 
-public class Trap : MonoBehaviour, IClicked
+public class Trap : Interaction
 {
-    [SerializeField] private Transform trap;
     [SerializeField] private int damage = 2;
-    public void OnClickAction()
+
+    public override void OnClickAction()
     {
         Level.Instance.PlayerData.DealDamage(damage);
-        Destroy(trap.gameObject);
+        base.OnClickAction();
     }
 }

@@ -1,20 +1,21 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Level : MonoBehaviour
 {
-    [SerializeField] private List<Room> roomVariants = new();
-    [SerializeField] private List<Transform> monstersPref = new();
-    [SerializeField] private List<Transform> itemPref = new();
-    [SerializeField] private List<Transform> trapPref = new();
-    [SerializeField]private PlayerSO playerData;
-    
-    private Transform currentRoom;
-    private Transform currentInteractiweObject;
+
+    [SerializeField] private PlayerSO playerData;
+    [SerializeField] private RoomSO roomData;
+    [SerializeField] private Transform currentRoomPref;
+    [SerializeField] private Room currentRoom;
+    [SerializeField] private ERoomTyp currentRoomTyp;
+
 
     public static Level Instance { get; private set; }
     public PlayerSO PlayerData { get => playerData; set => playerData = value; }
-
+    public RoomSO RoomData { get => roomData; set => roomData = value; }
+    public ERoomTyp CurrentRoomTyp { get => currentRoomTyp; set => currentRoomTyp = value; }
 
     private void Awake()
     {
@@ -22,105 +23,35 @@ public class Level : MonoBehaviour
     }
     private void Start()
     {
-        TypesOfRoom fyrstRoom = new();
-        fyrstRoom.Equals("Empty");
-        CreateNextRoom(fyrstRoom);
+        CreateNextRoom(ERoomTyp.Empty);
 
     }
 
-    public void CreateNextRoom(TypesOfRoom type)
+    private void Update()
     {
-        if (currentRoom != null)
+        if (playerData.healtBarFill <= 0)
         {
-            Destroy(currentRoom.gameObject);
+            SceneManager.LoadScene(0);
         }
-        currentRoom = roomVariants[Random.Range(0, roomVariants.Count)].CreateRoom(type);
-
     }
 
-    public Transform CreateNewMonster()
+    public void CreateNextRoom(ERoomTyp type)
     {
-        //int weaght = 0;
-        //for (int i = 0; i <  i++)
-        //{
-        //    weaght += room.doorSOPrefs[i].weaght;
-        //}
+        if (currentRoomPref != null)
+        {
+            Destroy(currentRoomPref.gameObject);
 
-        //int currentW = Random.Range(0, weaght);
-        //for (int i = 0; i < room.doorSOPrefs.Length; i++)
-        //{
+        }
+        currentRoom = roomData.roomVariantsPref[Random.Range(0, roomData.roomVariantsPref.Count)];
+        currentRoomPref = currentRoom.CreateRoom(type, currentRoom.transform);
+        CurrentRoomTyp = type;
 
-        //    if (currentW - room.doorSOPrefs[i].weaght <= 0)
-        //    {
 
-        //        return room.doorSOPrefs[i].doorPref;
-        //    }
-        //    else
-        //    {
-        //        currentW -= room.doorSOPrefs[i].weaght;
-        //    }
-        //}
-        currentInteractiweObject = monstersPref[0];
-        return monstersPref[0];
-    }
-    public Transform CreateNewItem()
-    {
-        //int weaght = 0;
-        //for (int i = 0; i <  i++)
-        //{
-        //    weaght += room.doorSOPrefs[i].weaght;
-        //}
-
-        //int currentW = Random.Range(0, weaght);
-        //for (int i = 0; i < room.doorSOPrefs.Length; i++)
-        //{
-
-        //    if (currentW - room.doorSOPrefs[i].weaght <= 0)
-        //    {
-
-        //        return room.doorSOPrefs[i].doorPref;
-        //    }
-        //    else
-        //    {
-        //        currentW -= room.doorSOPrefs[i].weaght;
-        //    }
-        //}
-       currentInteractiweObject = itemPref[0];
-        return itemPref[0];
-    }
-    public Transform CreateNewTrap()
-    {
-        //int weaght = 0;
-        //for (int i = 0; i <  i++)
-        //{
-        //    weaght += room.doorSOPrefs[i].weaght;
-        //}
-
-        //int currentW = Random.Range(0, weaght);
-        //for (int i = 0; i < room.doorSOPrefs.Length; i++)
-        //{
-
-        //    if (currentW - room.doorSOPrefs[i].weaght <= 0)
-        //    {
-
-        //        return room.doorSOPrefs[i].doorPref;
-        //    }
-        //    else
-        //    {
-        //        currentW -= room.doorSOPrefs[i].weaght;
-        //    }
-        //}
-        currentInteractiweObject = trapPref[0];
-        return trapPref[0];
-    }
-
-    public Transform CreateNewInteraction()
-    {
-        return null;
     }
 
     private void OnDestroy()
     {
         playerData.ResetHealth();
+
     }
 }

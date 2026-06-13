@@ -1,10 +1,10 @@
 using UnityEngine;
+using UnityEngine.UIElements;
 
-public class Item : MonoBehaviour, IClicked
+public class Item : Interaction, IClicked
 {
-    [SerializeField] private Transform item;
-    public void OnClickAction()
+    public override void OnClickAction()
     {
-        Destroy(item.gameObject);
+        base.OnClickAction();
     }
 }

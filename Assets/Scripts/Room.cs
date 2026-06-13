@@ -1,117 +1,93 @@
 using NUnit.Framework;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Linq;
 using Unity.VisualScripting;
 using UnityEngine;
 
 public class Room : MonoBehaviour
 {
-    [SerializeField] private RoomSO room;
+
     [SerializeField] private List<Transform> doorSpawnPoint = new();
     [SerializeField] private Transform cameraSpawnPoint;
     [SerializeField] private Transform spawnPoint;
 
-    private Transform newInteraction;
     private Transform currentRoom;
-    private TypesOfRoom roomType;
+    private int weaght;
 
-    private void Awake()
-    {
-        newInteraction = null;
-    }
+    public ERoomTyp RoomType { get; set; }
 
-    public Transform CreateRoom(TypesOfRoom type)
+    public Transform CreateRoom(ERoomTyp type, Transform roomPref)
     {
 
-        roomType = type;
-        SetTypOFRoom();
+        RoomType = type;
+        SetRoomTyp();
 
-        currentRoom = Instantiate(room.roomPref); //creates a randomly selected room
-        foreach (Transform point in doorSpawnPoint)
+        currentRoom = Instantiate(roomPref, roomPref.position, roomPref.rotation); //Create a randomly selected room
+        foreach (Transform point in doorSpawnPoint)//Randomizes and creates a specified number of doors for the room being created
         {
             Transform currentDoor = Instantiate(SelectDoor(), point.position, point.rotation);
             currentDoor.SetParent(currentRoom);
-        } //randomizes and creates a specified number of doors for the room being created
+        }
 
         return currentRoom;
     }
 
-    private Transform SelectDoor()
+    private Transform SelectDoor() //Create a randomly selected door
     {
-        int weaght = 0;
-        foreach (var doorWeaght in room.doorSOPrefs)
+        weaght = Random.Range(0, Level.Instance.RoomData.SetDoorWeaghtSum() + 1);
+        foreach (var door in Level.Instance.RoomData.doorSOPrefs)
         {
-            weaght += doorWeaght.weaght;
-        }
-        int currentW = Random.Range(0, weaght);
-        foreach (var door in room.doorSOPrefs)
-        {
-            if (currentW - door.weaght <= 0)
+            if (weaght - door.weaght <= 0)
             {
-                door.doorPref.GetComponent<Door>().SetCost();
+                door.doorPref.GetComponent<Door>().EntryCost = Random.Range(DoorSO.MIN_ENTRY_COST, DoorSO.MAX_ENTRY_COST); //Set current entry cost this door
+                Level.Instance.RoomData.ResetWeaght();
                 return door.doorPref;
             }
             else
             {
-                currentW -= door.weaght;
+                weaght -= door.weaght;
             }
-
-        //for (int i = 0; i < room.doorSOPrefs.Length; i++)
-        //{
-        //    weaght += room.doorSOPrefs[i].weaght;
-        //}
-
-            //for (int i = 0; i < room.doorSOPrefs.Length; i++)
-            //{
-
-            //    if (currentW - room.doorSOPrefs[i].weaght <= 0)
-            //    {
-
-            //        return room.doorSOPrefs[i].doorPref;
-            //    }
-            //    else
-            //    {
-            //        currentW -= room.doorSOPrefs[i].weaght;
-            //    }
-            //}
 
         }
         return null;
     }
 
-    private void SetTypOFRoom()
+    private void SetRoomTyp() //Set current room typ and current interaction
     {
-        switch (roomType)
+        switch (RoomType)
         {
-            case TypesOfRoom.Empty:
-                UnityEngine.Debug.Log(roomType);
-                newInteraction = null;
+            case ERoomTyp.Empty:
+                UnityEngine.Debug.Log(RoomType);
                 break;
 
-            case TypesOfRoom.Item:
-                UnityEngine.Debug.Log(roomType);
-                newInteraction = Level.Instance.CreateNewItem();
+            case ERoomTyp.Item:
+                UnityEngine.Debug.Log(RoomType);
+                CreateNewInteraction(Level.Instance.RoomData.itemPref[0]);
                 break;
 
-            case TypesOfRoom.Monster:
-                UnityEngine.Debug.Log(roomType);
-                newInteraction = Level.Instance.CreateNewMonster();
+            case ERoomTyp.Monster:
+                UnityEngine.Debug.Log(RoomType);
+                CreateNewInteraction(Level.Instance.RoomData.monstersPref[0]);
                 break;
 
-            case TypesOfRoom.Trap:
-                UnityEngine.Debug.Log(roomType);
-                newInteraction = Level.Instance.CreateNewTrap();
+            case ERoomTyp.Trap:
+                UnityEngine.Debug.Log(RoomType);
+                CreateNewInteraction(Level.Instance.RoomData.trapPref[0]);
                 break;
 
             default:
                 break;
         }
-        if (newInteraction != null)
-        {
-            Instantiate(newInteraction, spawnPoint.position, spawnPoint.rotation);
-        }
-
 
     }
 
+    private void CreateNewInteraction(Transform intractionTyp) // create current room interaction
+    {
+        if (intractionTyp != null)
+        {
+            Instantiate(intractionTyp, spawnPoint.position, spawnPoint.rotation);
+        }
+
+    }
 }

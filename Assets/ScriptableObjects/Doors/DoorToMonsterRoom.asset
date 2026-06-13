@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3f6ebec5519f9e49a9e54cf41db8be6, type: 3}
   m_Name: DoorToMonsterRoom
   m_EditorClassIdentifier: 
-  weaght: 40
+  weaght: 50
   doorName: DoorToMonsterRoom
   doorPref: {fileID: 1465577376472817843, guid: 2c19b5caa95f93d49b1a5feaa6192227, type: 3}
-  room: 2
+  roomTyp: 2

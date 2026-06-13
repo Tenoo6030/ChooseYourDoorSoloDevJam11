@@ -9,22 +9,22 @@
     background-color: rgb(135, 135, 135);
 }
 
-.HealtPoints {
-    position: relative;
-    visibility: visible;
-    height: 43px;
-    -unity-text-align: middle-center;
+.HealtText {
+    height: 40px;
     font-size: 0;
+    -unity-text-align: middle-center;
     color: rgb(255, 255, 255);
     -unity-font-style: bold;
+    -unity-text-outline-width: 3px;
+    -unity-text-outline-color: rgb(0, 0, 0);
 }
 
-.HealtPoints:hover {
-    position: relative;
-    visibility: visible;
-    height: 43px;
-    -unity-text-align: middle-center;
+.HealtText:hover {
+    height: 40px;
     font-size: 50px;
+    -unity-text-align: middle-center;
     color: rgb(255, 255, 255);
     -unity-font-style: bold;
+    -unity-text-outline-width: 3px;
+    -unity-text-outline-color: rgb(0, 0, 0);
 }

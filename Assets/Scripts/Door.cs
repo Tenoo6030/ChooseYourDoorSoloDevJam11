@@ -2,38 +2,17 @@ using UnityEngine;
 
 public class Door : MonoBehaviour, IClicked
 {
-    private const int MAX_ENTRY_COST = 5;
-    private const int MIN_ENTRY_COST = 1;
-
     [SerializeField] private DoorSO doorData;
-    [SerializeField]private int entryCost;
-    private TypesOfRoom roomType;
+    [SerializeField] private int entryCost;
 
     public DoorSO DoorData { get => doorData; private set => doorData = value; }
-    public int EntryCost { get => entryCost; private set => entryCost = value; }
-
-    public void SetCost()
-    {
-        entryCost = Random.Range(MIN_ENTRY_COST, MAX_ENTRY_COST);
-        EntryCost = entryCost;
-    }
-
-    public void SetNewRoom()
-    {
-        roomType = doorData.room;
-
-        Level.Instance.CreateNextRoom(roomType);
-    }
-
-    public void PayCost()
-    {
-        Level.Instance.PlayerData.DealDamage(EntryCost);
-        Debug.Log(EntryCost);
-    }
+    public int EntryCost { get => entryCost; set => entryCost = value; }
 
     public void OnClickAction()
     {
-        PayCost();
-        SetNewRoom();
+        Level.Instance.PlayerData.DealDamage(EntryCost); //Deal damag to player equal to entry cost
+        Level.Instance.CreateNextRoom(doorData.roomTyp); //Create new room 
+        entryCost = 0; //Reset entry cost
     }
+
 }

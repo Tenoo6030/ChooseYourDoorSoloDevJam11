@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d0d5986ce9ff7e4e9ac8007bb067aa5, type: 3}
+  m_Name: Room
+  m_EditorClassIdentifier: 
+  weaghtSum: 0
+  roomVariantsPref:
+  - {fileID: 7922059168065398281, guid: a7123dd1f7b2b6d4ba47cd4f1875206d, type: 3}
+  - {fileID: 8169287846495196427, guid: c218862a7ac202f41aad520a039d38ef, type: 3}
+  - {fileID: 6572667294306728074, guid: 0d072227a2b917643b1da4696aed8dfc, type: 3}
+  - {fileID: 1614205368301264363, guid: 3d63a05ff841531408cc5b532ea8a1cc, type: 3}
+  - {fileID: 784457324252384760, guid: cb6798243ea27a54e9cc4a8ce88e1467, type: 3}
+  - {fileID: -200096266758522348, guid: 599c11b843c1c6244924b8bf59df0ad0, type: 3}
+  - {fileID: 1493213123729803145, guid: 45290682a1e58bc46a4728c8c247d41b, type: 3}
+  monstersPref:
+  - {fileID: 386283776736700185, guid: 3718f9f3266f3904794e61458068adb9, type: 3}
+  itemPref:
+  - {fileID: 6319981788080396236, guid: 1cb1d22db109fc244b6f8d43accf4e37, type: 3}
+  trapPref:
+  - {fileID: 3696494380681284257, guid: 47a4584ca2946de44890b23fb6d3c2a1, type: 3}
+  doorSOPrefs:
+  - {fileID: 11400000, guid: ec5dbc1a6204b7c4fba6256e200dc747, type: 2}
+  - {fileID: 11400000, guid: d523c2761476b6b4aa49cd5d9664d72a, type: 2}
+  - {fileID: 11400000, guid: db4e1fb8e800d584fac17f2aa588e9e7, type: 2}
+  - {fileID: 11400000, guid: 61c40e86553ae594a8a4558aed508f87, type: 2}
