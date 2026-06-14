@@ -68,7 +68,7 @@ public class Room : MonoBehaviour
 
             case ERoomTyp.Monster:
                 UnityEngine.Debug.Log(RoomType);
-                CreateNewInteraction(Level.Instance.RoomData.monstersPref[0]);
+                CreateNewInteraction(Level.Instance.RoomData.monstersPref[0].interactionPref);
                 break;
 
             case ERoomTyp.Trap:

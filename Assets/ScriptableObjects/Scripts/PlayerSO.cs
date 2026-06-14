@@ -10,6 +10,7 @@ public class PlayerSO : ScriptableObject
     [SerializeField, Range(0, 100)] private int healt = 100;
     [Range(0, 800)] public int healtBarFill;
     public string doorCost;
+    public InteractionSO itemInLeftHend, itemInRightHend;
 
     public void DealDamage(int damage)
     {
@@ -28,4 +29,6 @@ public class PlayerSO : ScriptableObject
         healt = MAX_HEALTH;
         healtBarFill = HEALTH_BAR_WIDTH;
     }
+
+
 }

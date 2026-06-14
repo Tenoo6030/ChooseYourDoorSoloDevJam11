@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f940bc9391251ff40951583f6aaf895a, type: 3}
+  m_Name: BombInteraction
+  m_EditorClassIdentifier: 
+  weaght: 50
+  damage: 2
+  description: 
+  interactionName: 
+  icon: {fileID: 2800000, guid: d1ff155485a504e499c420350aa15f64, type: 3}
+  interactionPref: {fileID: 3696494380681284257, guid: 47a4584ca2946de44890b23fb6d3c2a1, type: 3}

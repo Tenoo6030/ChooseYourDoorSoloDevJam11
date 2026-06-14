@@ -2,11 +2,9 @@ using UnityEngine;
 
 public class Trap : Interaction
 {
-    [SerializeField] private int damage = 2;
-
     public override void OnClickAction()
     {
-        Level.Instance.PlayerData.DealDamage(damage);
+        Level.Instance.PlayerData.DealDamage(interactionData.damage);
         base.OnClickAction();
     }
 }

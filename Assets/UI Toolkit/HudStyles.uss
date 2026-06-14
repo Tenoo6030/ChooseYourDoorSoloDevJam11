@@ -28,3 +28,82 @@
     -unity-text-outline-width: 3px;
     -unity-text-outline-color: rgb(0, 0, 0);
 }
+
+.Button {
+    background-image: url("project://database/Assets/Art/border/Button%203/Normal.png?fileID=2800000&guid=b93d7b3a679a8f34c90cd1cb87c2d78d&type=3#Normal");
+    background-color: rgba(255, 255, 255, 0);
+    border-top-width: 0;
+    border-right-width: 0;
+    border-bottom-width: 0;
+    border-left-width: 0;
+    width: 145px;
+    height: 45px;
+    color: rgb(255, 255, 255);
+    -unity-text-align: middle-center;
+    white-space: pre-wrap;
+    text-overflow: clip;
+    font-size: 25px;
+}
+
+.Button:hover:active {
+    background-image: url("project://database/Assets/Art/border/Button%203/Disabled.png?fileID=2800000&guid=025abc8d094ff2e40805c60cda17f592&type=3#Disabled");
+    background-color: rgba(255, 255, 255, 0);
+    border-top-width: 0;
+    border-right-width: 0;
+    border-bottom-width: 0;
+    border-left-width: 0;
+    width: 145px;
+    height: 45px;
+    color: rgb(255, 255, 255);
+    -unity-text-align: middle-center;
+    white-space: pre-wrap;
+    text-overflow: clip;
+    font-size: 25px;
+}
+
+.Button:hover {
+    background-image: url("project://database/Assets/Art/border/Button%203/Hover.png?fileID=2800000&guid=4d4ac83d041c3ab488c95972ddd8b1b9&type=3#Hover");
+    background-color: rgba(255, 255, 255, 0);
+    border-top-width: 0;
+    border-right-width: 0;
+    border-bottom-width: 0;
+    border-left-width: 0;
+    width: 145px;
+    height: 45px;
+    color: rgb(255, 255, 255);
+    -unity-text-align: middle-center;
+    white-space: pre-wrap;
+    text-overflow: clip;
+    font-size: 25px;
+}
+
+.useNumber {
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    height: 20px;
+    -unity-text-align: middle-left;
+    white-space: normal;
+    left: 10px;
+    bottom: 5px;
+}
+
+.ItemInHend {
+    flex-grow: 0;
+    background-color: rgba(255, 255, 255, 0);
+    -unity-background-image-tint-color: rgb(255, 255, 255);
+    flex-shrink: 0;
+    height: 71px;
+    width: 79px;
+    top: 20px;
+    left: 10px;
+    right: 0;
+    bottom: 0;
+    background-image: none;
+}
+
+.Hend {
+    flex-grow: 1;
+    background-image: url("project://database/Assets/Art/border/Card%20X5.png?fileID=2800000&guid=d0c09c88ed28a464da12de9adc1dd0f5&type=3#Card X5");
+    width: 100px;
+    height: 100px;
+}

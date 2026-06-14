@@ -7,7 +7,7 @@ public class RoomSO : ScriptableObject
     [SerializeField]private int weaghtSum;
 
     public List<Room> roomVariantsPref = new();
-    public List<Transform> monstersPref = new();
+    public List<InteractionSO> monstersPref = new();
     public List<Transform> itemPref = new();
     public List<Transform> trapPref = new();
     public List<DoorSO> doorSOPrefs;
@@ -20,14 +20,14 @@ public class RoomSO : ScriptableObject
         }
         return weaghtSum;
     }
-    //public int SetMonsterWeaghtSum()
-    //{
-    //    foreach (var monsterWeaght in monstersPref)
-    //    {
-    //        weaghtSum += monsterWeaght.weaght;
-    //    }
-    //    return weaghtSum;
-    //}
+    public int SetMonsterWeaghtSum()
+    {
+        foreach (var monsterWeaght in monstersPref)
+        {
+            weaghtSum += monsterWeaght.weaght;
+        }
+        return weaghtSum;
+    }
     public void ResetWeaght() => weaghtSum = 0;
 }
 
