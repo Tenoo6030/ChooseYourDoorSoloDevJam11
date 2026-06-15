@@ -47,7 +47,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interaction: {fileID: 3696494380681284257}
-  damage: 2
+  interactionData: {fileID: 11400000, guid: c419cdf40620a0a41a0d4eccdef69513, type: 2}
+  popup: {fileID: 0}
 --- !u!135 &795221504601403825
 SphereCollider:
   m_ObjectHideFlags: 0

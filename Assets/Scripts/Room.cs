@@ -58,21 +58,19 @@ public class Room : MonoBehaviour
         switch (RoomType)
         {
             case ERoomTyp.Empty:
-                UnityEngine.Debug.Log(RoomType);
                 break;
 
             case ERoomTyp.Item:
-                UnityEngine.Debug.Log(RoomType);
+                
                 CreateNewInteraction(Level.Instance.RoomData.itemPref[0]);
                 break;
 
             case ERoomTyp.Monster:
-                UnityEngine.Debug.Log(RoomType);
+
                 CreateNewInteraction(Level.Instance.RoomData.monstersPref[0].interactionPref);
                 break;
 
             case ERoomTyp.Trap:
-                UnityEngine.Debug.Log(RoomType);
                 CreateNewInteraction(Level.Instance.RoomData.trapPref[0]);
                 break;
 

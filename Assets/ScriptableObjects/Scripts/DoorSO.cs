@@ -9,6 +9,6 @@ public class DoorSO : ScriptableObject
     public string doorName;
     public Transform doorPref;
     public ERoomTyp roomTyp;
-
+    public EItemTyp itemToSkyp;
 }
 

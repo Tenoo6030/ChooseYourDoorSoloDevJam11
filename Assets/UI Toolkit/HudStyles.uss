@@ -40,9 +40,10 @@
     height: 45px;
     color: rgb(255, 255, 255);
     -unity-text-align: middle-center;
-    white-space: pre-wrap;
+    white-space: pre;
     text-overflow: clip;
     font-size: 25px;
+    bottom: 18px;
 }
 
 .Button:hover:active {
@@ -56,7 +57,7 @@
     height: 45px;
     color: rgb(255, 255, 255);
     -unity-text-align: middle-center;
-    white-space: pre-wrap;
+    white-space: pre;
     text-overflow: clip;
     font-size: 25px;
 }
@@ -72,7 +73,7 @@
     height: 45px;
     color: rgb(255, 255, 255);
     -unity-text-align: middle-center;
-    white-space: pre-wrap;
+    white-space: pre;
     text-overflow: clip;
     font-size: 25px;
 }

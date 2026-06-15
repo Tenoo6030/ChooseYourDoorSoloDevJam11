@@ -20,10 +20,11 @@ public class Level : MonoBehaviour
     private void Awake()
     {
         Instance = this;
+        playerData.ResetPlayer();
     }
     private void Start()
     {
-        CreateNextRoom(ERoomTyp.Empty);
+        CreateNextRoom(ERoomTyp.Item);
 
     }
 
@@ -51,7 +52,7 @@ public class Level : MonoBehaviour
 
     private void OnDestroy()
     {
-        playerData.ResetHealth();
+        playerData.ResetPlayer();
 
     }
 }

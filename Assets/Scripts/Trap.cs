@@ -2,9 +2,13 @@ using UnityEngine;
 
 public class Trap : Interaction
 {
+    protected override void Awake()
+    {
+        base.Awake();
+    }
     public override void OnClickAction()
     {
-        Level.Instance.PlayerData.DealDamage(interactionData.damage);
+
         base.OnClickAction();
     }
 }

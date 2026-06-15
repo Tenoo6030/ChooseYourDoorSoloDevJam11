@@ -22,7 +22,11 @@ MonoBehaviour:
   - {fileID: -200096266758522348, guid: 599c11b843c1c6244924b8bf59df0ad0, type: 3}
   - {fileID: 1493213123729803145, guid: 45290682a1e58bc46a4728c8c247d41b, type: 3}
   monstersPref:
-  - {fileID: 386283776736700185, guid: 3718f9f3266f3904794e61458068adb9, type: 3}
+  - {fileID: 11400000, guid: 7e6d20c2e8636114e942e45bb4b0c179, type: 2}
+  - {fileID: 11400000, guid: e0ef2ac63ecc6f9418454d443253931f, type: 2}
+  - {fileID: 11400000, guid: a54ad675568dc714eb01444d6155300f, type: 2}
+  - {fileID: 11400000, guid: 0292764f1c3e0b64e88ce0275306f864, type: 2}
+  - {fileID: 11400000, guid: 07615ca0a88f1874b96278179dab431c, type: 2}
   itemPref:
   - {fileID: 6319981788080396236, guid: 1cb1d22db109fc244b6f8d43accf4e37, type: 3}
   trapPref:

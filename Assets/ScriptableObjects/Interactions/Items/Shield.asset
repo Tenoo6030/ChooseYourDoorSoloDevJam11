@@ -12,12 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f940bc9391251ff40951583f6aaf895a, type: 3}
   m_Name: Shield
   m_EditorClassIdentifier: 
-  heder: 
-  description: 
+  heder: Shield
+  description: It looks like you found the shield, you can use it 3 times to skip
+    the trap you encounter
   interactionPref: {fileID: 6319981788080396236, guid: 1cb1d22db109fc244b6f8d43accf4e37, type: 3}
-  icon: {fileID: 2800000, guid: 3cb69e8f938a99e4e89123d7964a71b9, type: 3}
-  currentUses: 3
+  icon: {fileID: 2800000, guid: de2c8c2b8cc6aeb408aaafd36ded0426, type: 3}
+  Uses: 3
   weaght: 30
   damage: 0
   heal: 0
-  item: 0
+  itemTyp: 4

@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3f6ebec5519f9e49a9e54cf41db8be6, type: 3}
   m_Name: DoorToEmptyRoom
   m_EditorClassIdentifier: 
-  entryCost: 1
   weaght: 10
   doorName: DoorToDoorToEmptyRoom
   doorPref: {fileID: 8893825678239962563, guid: aaeca63c5ce75424f9e3a38c3fbb4709, type: 3}
-  room: 0
+  roomTyp: 0
+  itemToSkyp: 1

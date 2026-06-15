@@ -16,3 +16,4 @@ MonoBehaviour:
   doorName: DoorToMonsterRoom
   doorPref: {fileID: 1465577376472817843, guid: 2c19b5caa95f93d49b1a5feaa6192227, type: 3}
   roomTyp: 2
+  itemToSkyp: 1

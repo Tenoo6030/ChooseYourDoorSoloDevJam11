@@ -16,3 +16,4 @@ MonoBehaviour:
   doorName: DoorToItemRoom
   doorPref: {fileID: 3471664375386286195, guid: 973209d4d7198c64ab531dc3d3328127, type: 3}
   roomTyp: 1
+  itemToSkyp: 1

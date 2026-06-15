@@ -205,9 +205,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 97eec39e693497746b3ef97a60ee11cd, type: 3}
       insertIndex: -1
       addedObject: {fileID: 4370119784805772425}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 97eec39e693497746b3ef97a60ee11cd, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: -6037068315322206271}
   m_SourcePrefab: {fileID: 100100000, guid: 97eec39e693497746b3ef97a60ee11cd, type: 3}
 --- !u!4 &358492595660395775 stripped
 Transform:
@@ -237,7 +234,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interaction: {fileID: 386283776736700185}
-  damage: 0
+  interactionData: {fileID: 11400000, guid: 7e6d20c2e8636114e942e45bb4b0c179, type: 2}
+  popup: {fileID: 0}
 --- !u!65 &3571467980237972896
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -281,17 +279,3 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &-6037068315322206271
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1015433763600170403}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f409f1dad3c2ac44e9a61b2f539e9011, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  interaction: {fileID: 5667716289812372293, guid: 4c4c3a73f4021e640be52c08a7d99b51, type: 3}
-  damage: 2

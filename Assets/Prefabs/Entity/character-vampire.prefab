@@ -100,7 +100,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interaction: {fileID: 3329605116789990093}
-  damage: 0
+  interactionData: {fileID: 11400000, guid: 0292764f1c3e0b64e88ce0275306f864, type: 2}
+  popup: {fileID: 0}
 --- !u!65 &2894595906142293664
 BoxCollider:
   m_ObjectHideFlags: 0

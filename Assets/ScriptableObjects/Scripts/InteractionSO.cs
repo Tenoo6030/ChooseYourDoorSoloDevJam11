@@ -10,10 +10,10 @@ public class InteractionSO : ScriptableObject
     public Transform interactionPref;
     public Texture2D icon;
     [Space]
-    public int currentUses;
+    public int Uses;
     public int weaght;
     public int damage;
     public int heal;
     [Space]
-    public EItem item;
+    public EItemTyp itemTyp;
 }

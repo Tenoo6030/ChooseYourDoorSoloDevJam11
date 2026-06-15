@@ -12,9 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f940bc9391251ff40951583f6aaf895a, type: 3}
   m_Name: GhostInteraction
   m_EditorClassIdentifier: 
+  heder: Ghost
+  description: 
+  interactionPref: {fileID: 188275518123152178, guid: 2dd15fc0e40834847b94d0ca376a8b64, type: 3}
+  icon: {fileID: 2800000, guid: 9509f381748d4db4bb5bd83a1391c14c, type: 3}
+  Uses: 0
   weaght: 40
   damage: 2
-  description: 
-  interactionName: GhostInteraction
-  icon: {fileID: 2800000, guid: d1ff155485a504e499c420350aa15f64, type: 3}
-  interactionPref: {fileID: 188275518123152178, guid: 2dd15fc0e40834847b94d0ca376a8b64, type: 3}
+  heal: 0
+  itemTyp: 3

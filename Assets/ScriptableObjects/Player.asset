@@ -14,4 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healt: 100
   healtBarFill: 800
-  doorCost: 0
+  itemInLeftHand: {fileID: 0}
+  inLeftHand: 0
+  leftCurrentItemUse: 0
+  itemInRightHand: {fileID: 0}
+  inRightHand: 0
+  rightCurrentItemUse: 0

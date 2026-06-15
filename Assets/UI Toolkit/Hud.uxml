@@ -16,53 +16,60 @@
         <ui:Label text="Cost to Open:" name="CostText" style="width: 331px; font-size: 50px; color: rgb(255, 254, 254); -unity-text-align: middle-center; white-space: nowrap;" />
         <ui:Label text="0" name="Cost" style="font-size: 50px; color: rgb(255, 254, 254); -unity-text-align: middle-left; white-space: nowrap; position: relative; flex-shrink: 1; flex-grow: 1;" />
     </ui:VisualElement>
-    <ui:VisualElement name="HendContener" style="flex-grow: 1; bottom: 0; left: 890px; right: 860px; top: auto; position: absolute; height: 100px; width: 200px; flex-direction: row;">
-        <ui:VisualElement name="LeftHend" class="Hend">
-            <ui:VisualElement name="ItemInLeftHend" data-source="project://database/Assets/ScriptableObjects/Interactions/Items/MasterKey.asset?fileID=11400000&amp;guid=48ab6efbdbc2fc041ae27736c03cb9cb&amp;type=2#MasterKey" class="ItemInHend">
+    <ui:VisualElement name="HandContener" style="flex-grow: 1; bottom: 0; left: 890px; right: 860px; top: auto; position: absolute; height: 100px; width: 200px; flex-direction: row;">
+        <ui:VisualElement name="LeftHand" class="Hend">
+            <ui:VisualElement name="ItemInLeftHand" data-source="project://database/Assets/ScriptableObjects/Interactions/Items/Shield.asset?fileID=11400000&amp;guid=ecd104c9c83dbb840a83f458eb0a2f65&amp;type=2#Shield" class="ItemInHend">
                 <Bindings>
                     <ui:DataBinding property="style.backgroundImage" data-source-path="icon" binding-mode="ToTarget" />
                 </Bindings>
             </ui:VisualElement>
-            <ui:Label text="2" name="LeftUseNumber" data-source="project://database/Assets/ScriptableObjects/Interactions/Items/MasterKey.asset?fileID=11400000&amp;guid=48ab6efbdbc2fc041ae27736c03cb9cb&amp;type=2#MasterKey" class="useNumber">
+            <ui:Label name="LeftUseNumber" data-source="project://database/Assets/ScriptableObjects/Player.asset?fileID=11400000&amp;guid=69077ffab16b78149b35574d0b980feb&amp;type=2#Player" class="useNumber">
                 <Bindings>
-                    <ui:DataBinding property="text" data-source-path="currentUses" binding-mode="ToTarget" />
+                    <ui:DataBinding property="text" data-source-path="leftCurrentItemUse" binding-mode="ToTarget" />
                 </Bindings>
             </ui:Label>
         </ui:VisualElement>
-        <ui:VisualElement name="RightHend" class="Hend">
-            <ui:VisualElement name="ItemInRightHend" data-source="project://database/Assets/ScriptableObjects/Interactions/Items/Sword.asset?fileID=11400000&amp;guid=55f1c6da4e7135a4fb03c3f4890d8f49&amp;type=2#Sword" class="ItemInHend">
+        <ui:VisualElement name="RightHand" class="Hend">
+            <ui:VisualElement name="ItemInRightHand" data-source="project://database/Assets/ScriptableObjects/Interactions/Items/Sword.asset?fileID=11400000&amp;guid=55f1c6da4e7135a4fb03c3f4890d8f49&amp;type=2#Sword" class="ItemInHend">
                 <Bindings>
                     <ui:DataBinding property="style.backgroundImage" data-source-path="icon" binding-mode="ToTarget" />
                 </Bindings>
             </ui:VisualElement>
-            <ui:Label text="3" name="RightUseNumber" data-source="project://database/Assets/ScriptableObjects/Interactions/Items/Sword.asset?fileID=11400000&amp;guid=55f1c6da4e7135a4fb03c3f4890d8f49&amp;type=2#Sword" class="useNumber">
+            <ui:Label name="RightUseNumber" data-source="project://database/Assets/ScriptableObjects/Player.asset?fileID=11400000&amp;guid=69077ffab16b78149b35574d0b980feb&amp;type=2#Player" class="useNumber">
                 <Bindings>
-                    <ui:DataBinding property="text" data-source-path="currentUses" binding-mode="ToTarget" />
+                    <ui:DataBinding property="text" data-source-path="rightCurrentItemUse" binding-mode="ToTarget" />
                 </Bindings>
             </ui:Label>
         </ui:VisualElement>
     </ui:VisualElement>
-    <ui:VisualElement name="PopupContener" style="flex-grow: 1; position: absolute; height: 720px; width: 695px; top: 200px; left: 640px; background-image: url(&quot;project://database/Assets/Art/border/Card%20X100.png?fileID=2800000&amp;guid=e01618b8f9aa0fa49a4628945766b744&amp;type=3#Card X100&quot;); right: 0; flex-direction: row; align-items: flex-end; justify-content: center; align-self: center; flex-wrap: nowrap; -unity-slice-type: sliced;">
-        <ui:Label text="Header" name="Header" data-source="project://database/Assets/ScriptableObjects/Interactions/Items/HealPotion.asset?fileID=11400000&amp;guid=22958a5b57dd6e24d9a8c30ae7b84ade&amp;type=2#HealPotion" style="height: 100px; width: 664px; top: 100px; color: rgb(255, 255, 255); left: 10px; right: 0; -unity-text-align: middle-center; font-size: 50px; position: absolute;">
+    <ui:VisualElement name="PopupContener" style="flex-grow: 1; position: absolute; height: 720px; width: 695px; top: 200px; left: 640px; background-image: url(&quot;project://database/Assets/Art/border/Card%20X100.png?fileID=2800000&amp;guid=e01618b8f9aa0fa49a4628945766b744&amp;type=3#Card X100&quot;); right: 0; flex-direction: row; align-items: flex-end; justify-content: center; align-self: center; flex-wrap: nowrap; -unity-slice-type: sliced; visibility: visible; display: flex;">
+        <ui:Label name="Header" data-source="project://database/Assets/ScriptableObjects/Interactions/Items/Shield.asset?fileID=11400000&amp;guid=ecd104c9c83dbb840a83f458eb0a2f65&amp;type=2#Shield" style="height: 100px; width: 664px; top: 100px; color: rgb(255, 255, 255); left: 10px; right: 0; -unity-text-align: middle-center; font-size: 50px; position: absolute;">
             <Bindings>
-                <ui:DataBinding property="text" data-source-path="interactionName" binding-mode="ToTarget" />
+                <ui:DataBinding property="text" data-source-path="heder" binding-mode="ToTarget" />
             </Bindings>
         </ui:Label>
         <ui:VisualElement name="IconsBackground" style="flex-grow: 1; width: 200px; height: 200px; top: 212px; left: 236px; right: 259px; position: absolute; background-image: url(&quot;project://database/Assets/Art/border/Card%20X6.png?fileID=2800000&amp;guid=76902af5b5424c64f97fadbe03fb1417&amp;type=3#Card X6&quot;); bottom: 309px;">
-            <ui:VisualElement name="Icon" data-source="project://database/Assets/ScriptableObjects/Interactions/Items/HealPotion.asset?fileID=11400000&amp;guid=22958a5b57dd6e24d9a8c30ae7b84ade&amp;type=2#HealPotion" style="flex-grow: 1; background-image: url(&quot;project://database/Assets/Art/Potion%2011.png?fileID=2800000&amp;guid=2bad1e3a364993543a14e74984e8b93d&amp;type=3#Potion 11&quot;); width: 150px; height: 150px; flex-direction: row; align-items: auto; justify-content: center; align-self: center; position: absolute; top: 40px; left: 25px; right: 0; bottom: 0;">
+            <ui:VisualElement name="Icon" data-source="project://database/Assets/ScriptableObjects/Interactions/Items/Shield.asset?fileID=11400000&amp;guid=ecd104c9c83dbb840a83f458eb0a2f65&amp;type=2#Shield" style="flex-grow: 1; background-image: url(&quot;project://database/Assets/Art/Potion%2011.png?fileID=2800000&amp;guid=2bad1e3a364993543a14e74984e8b93d&amp;type=3#Potion 11&quot;); width: 150px; height: 150px; flex-direction: row; align-items: auto; justify-content: center; align-self: center; position: absolute; top: 40px; left: 25px; right: 0; bottom: 0;">
                 <Bindings>
                     <ui:DataBinding property="style.backgroundImage" data-source-path="icon" binding-mode="ToTarget" />
                 </Bindings>
             </ui:VisualElement>
         </ui:VisualElement>
         <ui:VisualElement name="DescriptionBackground" style="flex-grow: 1; height: 237px; position: absolute; bottom: 63px; right: 13px; left: 18px; background-image: url(&quot;project://database/Assets/Art/border/Card%20X102.png?fileID=2800000&amp;guid=2ae1c1f1acd1fae4d92a67d8d73b9868&amp;type=3#Card X102&quot;);">
-            <ui:Label text="Description" name="Description" style="bottom: auto; left: 20px; right: auto; position: relative; height: 196px; -unity-text-align: upper-left; font-size: 20px; top: 20px; width: 620px; color: rgb(255, 255, 255); white-space: normal;">
+            <ui:Label name="Description" data-source="project://database/Assets/ScriptableObjects/Interactions/Items/Shield.asset?fileID=11400000&amp;guid=ecd104c9c83dbb840a83f458eb0a2f65&amp;type=2#Shield" style="bottom: auto; left: 20px; right: auto; position: relative; height: 196px; -unity-text-align: upper-center; font-size: 30px; top: 20px; width: 620px; color: rgb(255, 255, 255); white-space: normal;">
                 <Bindings>
-                    <ui:DataBinding property="text" data-source-path="description" data-source="project://database/Assets/ScriptableObjects/Interactions/Items/HealPotion.asset?fileID=11400000&amp;guid=22958a5b57dd6e24d9a8c30ae7b84ade&amp;type=2#HealPotion" binding-mode="ToTarget" />
+                    <ui:DataBinding property="text" data-source-path="description" binding-mode="ToTarget" />
                 </Bindings>
             </ui:Label>
         </ui:VisualElement>
         <ui:Button text="Accept" name="AcceptButton" class="Button" />
         <ui:Button text="Cancel" name="CancelButton" class="Button" />
+    </ui:VisualElement>
+    <ui:VisualElement name="QuestionPopupContener" style="flex-grow: 1; position: absolute; height: 720px; width: 695px; top: 200px; left: 640px; background-image: url(&quot;project://database/Assets/Art/border/Card%20X102.png?fileID=2800000&amp;guid=2ae1c1f1acd1fae4d92a67d8d73b9868&amp;type=3#Card X102&quot;); right: 0; flex-direction: row; align-items: flex-end; justify-content: center; align-self: center; flex-wrap: nowrap; -unity-slice-type: sliced; visibility: visible; display: flex;">
+        <ui:VisualElement name="DescriptionBackground" style="flex-grow: 1; height: 237px; position: absolute; bottom: 63px; right: 13px; left: 18px; background-image: url(&quot;project://database/Assets/Art/border/Card%20X102.png?fileID=2800000&amp;guid=2ae1c1f1acd1fae4d92a67d8d73b9868&amp;type=3#Card X102&quot;);">
+            <ui:Label name="QuestionDescription" text="It looks like you already have 2 items which one you want to replace" style="bottom: auto; left: 20px; right: auto; position: relative; height: 196px; -unity-text-align: middle-center; font-size: 40px; top: 20px; width: 620px; color: rgb(255, 255, 255); white-space: normal;" />
+        </ui:VisualElement>
+        <ui:Button text="Left Hand" name="LeftHandButton" class="Button" />
+        <ui:Button text="Right Hand" name="RightHandButton" class="Button" />
     </ui:VisualElement>
 </ui:UXML>

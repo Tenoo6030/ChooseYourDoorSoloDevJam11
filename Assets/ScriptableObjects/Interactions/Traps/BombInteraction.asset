@@ -12,9 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f940bc9391251ff40951583f6aaf895a, type: 3}
   m_Name: BombInteraction
   m_EditorClassIdentifier: 
+  heder: Bomb
+  description: 
+  interactionPref: {fileID: 3696494380681284257, guid: 47a4584ca2946de44890b23fb6d3c2a1, type: 3}
+  icon: {fileID: 3506167780502562645, guid: 49b9fd04f34ef2946ab6a79957f6f37d, type: 3}
+  Uses: 0
   weaght: 50
   damage: 2
-  description: 
-  interactionName: 
-  icon: {fileID: 2800000, guid: d1ff155485a504e499c420350aa15f64, type: 3}
-  interactionPref: {fileID: 3696494380681284257, guid: 47a4584ca2946de44890b23fb6d3c2a1, type: 3}
+  heal: 0
+  itemTyp: 4

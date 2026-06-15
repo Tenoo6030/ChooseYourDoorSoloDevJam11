@@ -12,12 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f940bc9391251ff40951583f6aaf895a, type: 3}
   m_Name: MasterKey
   m_EditorClassIdentifier: 
-  heder: 
-  description: 
+  heder: Master Key
+  description: In the chest you find a large key, it looks like it fits all the door
+    locks. You can use the key 3 times to avoid the cost of entering them
   interactionPref: {fileID: 6319981788080396236, guid: 1cb1d22db109fc244b6f8d43accf4e37, type: 3}
   icon: {fileID: 2800000, guid: 17d0a0e4cb654d446b326ec31963ddc4, type: 3}
-  currentUses: 3
+  Uses: 3
   weaght: 30
   damage: 0
   heal: 0
-  item: 0
+  itemTyp: 2
